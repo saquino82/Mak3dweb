@@ -119,5 +119,24 @@ main {
     }
     form{
         color: $colorTerciario;
+        input{
+        text-align: center;
+        background-color: $colorSecundario;
+        color: $colorTerciario;
+        margin: 1px;
+        padding: 1px;
+        }
+        select{
+            @extend input;
+        }
+    }
+
+    .botonform{
+        text-align: center;
+        background-color: $colorSecundario;
+        color: $colorTerciario;
+        margin: 1px;
+        padding: 5px;
+
     }
 }

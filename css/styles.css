@@ -115,6 +115,18 @@ main {
     background-color: #FCECDD; }
   main form {
     color: #FF6701; }
+    main form input, main form select {
+      text-align: center;
+      background-color: #FCECDD;
+      color: #FF6701;
+      margin: 1px;
+      padding: 1px; }
+  main .botonform {
+    text-align: center;
+    background-color: #FCECDD;
+    color: #FF6701;
+    margin: 1px;
+    padding: 5px; }
 
 footer {
   grid-area: pie;
