@@ -1,0 +1,271 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+header {
+  grid-area: encabezado;
+  display: grid;
+  grid-template-areas: "logo titulo menus";
+  background-image: linear-gradient(#FCECDD, #FFC288);
+  font-family: 'Indie Flower', cursive;
+  color: #FF6701;
+  flex-wrap: wrap;
+  position: sticky;
+  z-index: 1; }
+  header .navbar-estilo {
+    grid-area: menu; }
+  header .logo-principal {
+    grid-area: logo;
+    display: flex; }
+    header .logo-principal img {
+      animation-name: logo-late;
+      animation-timing-function: linear;
+      animation-duration: 8s;
+      animation-iteration-count: infinite; }
+
+@keyframes logo-late {
+  from {
+    transform: scale(0.9); }
+  to {
+    transform: scale(1.05); } }
+  header .titulo-principal {
+    grid-area: titulo;
+    margin: 1em;
+    text-align: center;
+    justify-content: center; }
+
+main {
+  grid-area: cuerpo;
+  margin: 1rem;
+  padding: 1rem;
+  font-family: 'Indie Flower', cursive; }
+  main .imagen-fondo {
+    width: 100%;
+    justify-items: center; }
+  main .accordion-header .accordion-button {
+    color: #FF6701;
+    background-color: #FCECDD;
+    align-items: center; }
+  main .accordion-body {
+    color: #FF6701; }
+  main .main-tienda {
+    display: flex;
+    flex-wrap: wrap; }
+  main h2 {
+    margin: 1em;
+    padding: 0.2em;
+    font-size: 1.5rem;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline;
+    color: #FF6701; }
+  main h3 {
+    margin: 1em;
+    padding: 0.2em;
+    font-size: 1.5rem;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline;
+    color: #FF6701; }
+  main p {
+    font-size: 1.2rem;
+    color: #FF6701; }
+  main h4 {
+    margin: 1em;
+    padding: 0.2em;
+    font-size: 1.5rem;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline; }
+  main .carouseles {
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+    main .carouseles .descripcion-imagenes h5 {
+      font-family: 'Indie Flower', cursive;
+      color: #0f0f0e;
+      font-size: 1.5rem;
+      background-color: wheat; }
+    main .carouseles .descripcion-imagenes p {
+      font-family: "Indie Flower", cursive, #FF6701;
+      color: #0f0f0e;
+      font-size: 1.2rem;
+      background-color: wheat; }
+    main .carouseles .img-car {
+      margin: 0.2rem;
+      border: #de9767;
+      border-width: 5px;
+      border-style: solid; }
+  main .imagenes-varias, main .imagenes-varias1, main .card {
+    width: 30%;
+    margin: 1rem;
+    border: #de9767;
+    border-width: 5px;
+    border-style: solid; }
+  main .imagenes-varias1 {
+    width: 15%; }
+  main .desplegablesMain {
+    background-color: #FFC288; }
+  main .card .card-body {
+    background-color: #FCECDD; }
+  main .card .btn-primary {
+    background-color: #de9767;
+    border: none;
+    color: black; }
+  main .accordion-item {
+    text-align: center;
+    background-color: #FCECDD; }
+  main form {
+    color: #FF6701; }
+
+footer {
+  grid-area: pie;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "logof contactos direccion redes";
+  flex-wrap: wrap;
+  background-image: linear-gradient(#FFC288, #FCECDD);
+  font-family: "Indie Flower", cursive;
+  color: #FF6701;
+  gap: 1em;
+  text-align: top;
+  justify-content: top;
+  align-items: top; }
+  footer .copy {
+    grid-area: logof;
+    display: flex;
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+    text-align: center; }
+    footer .copy img {
+      align-self: center;
+      justify-self: center; }
+    footer .copy .derechos {
+      grid-area: logof;
+      font-size: 1em; }
+  footer .contactos {
+    grid-area: contactos;
+    text-align: center; }
+    footer .contactos .contac-pie {
+      display: inline-block;
+      margin: 0.2em;
+      padding: 0.2em;
+      flex-wrap: wrap;
+      list-style-type: none; }
+  footer .ubicacion-pie {
+    justify-self: center;
+    grid-area: direccion;
+    align-content: center;
+    justify-content: center; }
+  footer .redes {
+    grid-area: redes;
+    text-align: center; }
+
+@media screen and (max-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "encabezado" "cuerpo" "pie";
+    padding: 10px; }
+    body header {
+      grid-area: encabezado;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; }
+      body header .logo-principal {
+        width: 30%; }
+    body .titulo-trincipal {
+      font-size: .5em;
+      margin: 1em;
+      align-self: center;
+      justify-self: center;
+      text-align: center; }
+  main .imagen-fondo {
+    flex-grow: initial; }
+  main h3 {
+    font-size: 1rem;
+    margin: 1em;
+    padding: 0.2em;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline; }
+  main h4 {
+    font-size: 1rem; }
+  main p {
+    font-size: 0.9rem; }
+  main .accordion-header button {
+    font-size: 1.2rem; }
+  footer {
+    grid-area: pie;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    footer .copy .derechos {
+      font-size: 0.8rem;
+      margin: 1em; }
+    footer .contactos {
+      grid-area: contactos;
+      font-size: 0.8rem; }
+      footer .contactos h3 {
+        visibility: hidden; }
+      footer .contactos .contac-pie li {
+        list-style: none;
+        justify-content: center;
+        align-items: center; }
+      footer .contactos .contac-pie .direc {
+        visibility: hidden; }
+      footer .contactos .contac-pie .tel {
+        visibility: hidden; }
+    footer .ubicacion-pie {
+      visibility: hidden; }
+    footer .redes {
+      grid-area: redes;
+      font-size: 0.5rem; }
+      footer .redes h4 {
+        visibility: hidden; }
+      footer .redes h5 {
+        visibility: hidden; } }
+
+@media screen and (min-width: 769px) {
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "encabezado" "cuerpo" "pie";
+    padding: 10px; }
+    body header .navbar-estilo .navbar-brand:hover {
+      transform: scale(1.5); }
+    body header .titulo-principal {
+      margin: 1.5em;
+      text-align: center;
+      justify-content: center; }
+      body header .titulo-principal h1 {
+        font-size: rem; }
+      body header .titulo-principal h2 {
+        font-size: 3rem; }
+    body main .imagen-fondo {
+      flex-grow: initial; }
+    body main .accordion-header button {
+      font-size: 2rem; }
+    body main .accordion-body {
+      font-size: 1.4rem; }
+    body main h4 {
+      font-size: 1rem; }
+    body main .imagenes-varias, body main .imagenes-varias1, body main .card {
+      width: 30%; }
+    body main .imagenes-varias1 {
+      width: 25%; }
+    body footer .contactos {
+      font-size: 1rem; }
+    body footer .redes {
+      font-size: 1rem; } }
+
+body {
+  background-color: #FFC288;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "menu" "encabezado" "cuerpo" "pie";
+  padding: 10px; }

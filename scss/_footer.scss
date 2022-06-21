@@ -1,0 +1,59 @@
+// estilos de footer
+
+footer {
+  grid-area: pie;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "logof contactos direccion redes";
+  flex-wrap: wrap;
+  background-image: linear-gradient($colorPrincipal, $colorSecundario);
+  font-family: "Indie Flower", cursive;
+  color: $colorTerciario;
+  gap: 1em;
+  text-align: top;
+  justify-content: top;
+  align-items: top;
+
+  .copy {
+    grid-area: logof;
+    display: flex;
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+
+    img {
+      align-self: center;
+      justify-self: center;
+    }
+    .derechos{
+      grid-area: logof;
+    font-size: 1em;
+    }
+    }
+
+  .contactos {
+    grid-area: contactos;
+    text-align: center;
+
+    .contac-pie {
+      display: inline-block;
+      margin: 0.2em;
+      padding: 0.2em;
+      flex-wrap: wrap;
+      list-style-type: none;
+    }
+  }
+
+  .ubicacion-pie {
+      justify-self: center;
+    grid-area: direccion;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .redes {
+    grid-area: redes;
+    text-align: center;
+  }
+}

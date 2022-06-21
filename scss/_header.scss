@@ -1,0 +1,50 @@
+//estilos del encabezado
+
+header {
+    grid-area: encabezado;
+    display: grid;
+    grid-template-areas: "logo titulo menus";
+    background-image: linear-gradient($colorSecundario, $colorPrincipal);
+    font-family: 'Indie Flower', cursive;
+    color: $colorTerciario;
+    flex-wrap: wrap;
+    position: sticky;
+    z-index: 1;
+
+    //estilo para posicionar el menu
+    .navbar-estilo {
+        grid-area: menu;
+    }
+
+    // propiedades del logo en encabezado
+    .logo-principal {
+    grid-area: logo;
+    display: flex;
+    //animacion del logo principal
+            img {
+            
+            animation-name: logo-late;
+            animation-timing-function: linear;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+
+            @keyframes logo-late {
+                from {
+                    transform: scale(0.9);
+                }
+
+                to {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+// propiedades del titulo-eslogan
+.titulo-principal {
+    grid-area: titulo;
+    margin: 1em;
+    text-align: center;
+    justify-content: center;
+  }
+
+}

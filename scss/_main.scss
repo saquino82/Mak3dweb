@@ -1,0 +1,123 @@
+main {
+    grid-area: cuerpo;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Indie Flower', cursive;
+
+    .imagen-fondo {
+        width: 100%;
+        justify-items: center;
+    }
+
+    .accordion-header {
+
+        .accordion-button {
+            color: $colorTerciario;
+            background-color: $colorSecundario;
+            align-items: center;
+
+        }
+    }
+
+    .accordion-body {
+        color: $colorTerciario;
+    }
+
+
+    //acomodamos los main de los distintos html
+    .main-tienda {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    h2 {
+        @include flex (1em, 0.2em, 1.5rem);
+        font-family: 'Indie Flower', cursive;
+        text-decoration: underline;
+        color: $colorTerciario;
+    }
+
+    h3 {
+        @include flex (1em, 0.2em, 1.5rem);
+        font-family: 'Indie Flower', cursive;
+        text-decoration: underline;
+        color: $colorTerciario;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: $colorTerciario;
+    }
+
+    h4 {
+        @include flex (1em, 0.2em, 1.5rem);
+        font-family: 'Indie Flower', cursive;
+        text-decoration: underline;
+    }
+
+    .carouseles {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+
+        .descripcion-imagenes {
+            h5 {
+                font-family: 'Indie Flower', cursive;
+                color: #0f0f0e;
+                font-size: 1.5rem;
+                background-color: wheat;
+            }
+
+            p {
+                font-family: 'Indie Flower', cursive, $colorTerciario;
+                color: #0f0f0e;
+                font-size: 1.2rem;
+                background-color: wheat;
+            }
+        }
+
+        .img-car {
+            @include cuadro (0.2rem, $colorCuatro, 5px, solid);
+        }
+    }
+
+    .imagenes-varias {
+        width: 30%;
+        @include cuadro (1rem, $colorCuatro, 5px, solid);
+    }
+
+    .imagenes-varias1 {
+        width: 15%;
+        @extend .imagenes-varias;
+    }
+
+    .desplegablesMain {
+        background-color: $colorPrincipal;
+    }
+
+    .card {
+        @extend .imagenes-varias;
+
+        .card-body {
+            background-color: $colorSecundario;
+        }
+
+        .btn-primary {
+            background-color: $colorCuatro;
+            border: none;
+            color: black;
+
+        }
+    }
+
+    .accordion-item {
+        text-align: center;
+        background-color: $colorSecundario;
+
+    }
+    form{
+        color: $colorTerciario;
+    }
+}
